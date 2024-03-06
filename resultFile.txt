@@ -46,7 +46,9 @@
 1635: en: Conversion of reference to object
 1635: ru: Конвертация ссылки на объект
 1635: vi: Chuyển đổi tham chiếu đến đối tượng
-1635: ro: Conversia referinței la obiect"), NStr("en
+1635: ro: Conversia referinței la obiect
+
+1635: en: Object conversion
 1635: ru: Конвертация объекта
 1635: vi: Chuyển đổi đối tượng
 1635: ro: Conversia obiectelor
@@ -126,7 +128,8 @@
 5899: vi: Lỗi định dạng thông báo trao đổi.
 5899: ro: Eroare în formatul mesajului de schimb.
 
-5912: en: ""Error in exchange messages format.""; ru
+5912: en: Error in exchange messages format.
+5912: ru: Ошибка формата сообщения обмена.
 5912: vi: Lỗi định dạng thông báo trao đổi.
 5912: ro: Eroare în formatul mesajului de schimb.
 

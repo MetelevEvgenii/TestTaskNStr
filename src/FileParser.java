@@ -29,7 +29,7 @@ public class FileParser {
             while (iterator.hasNext()) {
                 String oneLine = iterator.next();
                 curLine ++;
-               /* if (oneLine.split("NStr").length>2) {//возможны несколько NStr на одной строке
+                if (oneLine.split("NStr").length>2) {//возможны несколько NStr на одной строке
                     String [] doubleNstr = oneLine.split("NStr");
                     for(int i=1; i < doubleNstr.length ;i++) {//0 - не Nstr функция
                         oneLine = "Nstr"+doubleNstr[i];
@@ -39,7 +39,7 @@ public class FileParser {
                         oneLine = iterator.next();
                         curLine ++;
                     }
-                }*/
+                }
                 if (oneLine.contains("NStr(")) {
                     while (!oneLine.contains("'\"")) {
                         curLine ++;
@@ -60,11 +60,12 @@ public class FileParser {
 
     private String workWithOneLine(String oneLine, int curLine) {
 
-        String nstr = oneLine.substring(oneLine.indexOf("NStr(\"")+6, oneLine.lastIndexOf("'\""));
+        String nstr = oneLine.substring(oneLine.toLowerCase().indexOf("nstr(\"")+6, oneLine.lastIndexOf("'\""));
         int countSlash = 0;
         if (nstr.contains("|")) {
             countSlash = nstr.split("\\|").length-1;
         }
+        nstr = nstr.replace("en = \"\"","en = '").replace("\"\";","';");
         String[] languages = nstr.split("';");
         StringBuilder resStr = new StringBuilder();
         for (String oneLanguage : languages) {
